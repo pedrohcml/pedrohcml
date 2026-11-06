@@ -55,6 +55,7 @@ ART_WIDTH = 472
 ART_FONT_SIZE = 8.9
 ART_CHAR_W = 5.36
 ART_LINE_H = 12.8
+CELL_ASPECT = 0.49
 
 PAD = 10
 PAD_TOP = 26
@@ -187,9 +188,10 @@ def main():
         ascii_rows = f.read().rstrip("\n").split("\n")
         indent = min(len(r) - len(r.lstrip()) for r in ascii_rows if r.strip())
         ascii_rows = [r[indent:] for r in ascii_rows]
-        global ART_CHAR_W, ART_FONT_SIZE
+        global ART_CHAR_W, ART_FONT_SIZE, ART_LINE_H
         ART_CHAR_W = ART_WIDTH / max(len(r) for r in ascii_rows)
         ART_FONT_SIZE = ART_CHAR_W / 0.6
+        ART_LINE_H = ART_CHAR_W / CELL_ASPECT
     info_lines = build_info_lines(values)
 
     for name, theme in THEMES.items():
