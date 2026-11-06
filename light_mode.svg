@@ -2,7 +2,7 @@
 <style>
     text { font-family: 'Courier New', Consolas, 'DejaVu Sans Mono', monospace; white-space: pre; }
     .ascii { fill: #24292f; font-size: 8.7px; font-weight: 700; }
-    .info { font-size: 20px; }
+    .info { font-size: 15px; }
     .key { fill: #953800; }
     .val { fill: #0a3069; }
     .dots { fill: #c2cfde; }
