@@ -65,8 +65,8 @@ RAMP = " .'`,:;-~+=*xoO#%@"
 FLOOR = 4
 
 THEMES = {
-    "dark_mode.svg": dict(bg="#161b22", ascii="#c9d1d9", key="#ffa657", val="#a5d6ff", dots="#616e7f", rule="#c9d1d9"),
-    "light_mode.svg": dict(bg="#f6f8fa", ascii="#24292f", key="#953800", val="#0a3069", dots="#c2cfde", rule="#24292f", invert=True),
+    "dark.svg": dict(bg="#161b22", ascii="#c9d1d9", key="#ffa657", val="#a5d6ff", dots="#616e7f", rule="#c9d1d9"),
+    "light.svg": dict(bg="#f6f8fa", ascii="#24292f", key="#953800", val="#0a3069", dots="#c2cfde", rule="#24292f", invert=True),
 }
 
 def invert_ascii(rows: list) -> list:
