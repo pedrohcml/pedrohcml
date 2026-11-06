@@ -57,7 +57,7 @@ ART_LINE_H = 10.6
 
 PAD = 13
 PAD_TOP = 26
-GAP = 5
+GAP = 10
 
 RAMP = " .'`,:;-~+=*xoO#%@"
 FLOOR = 4
