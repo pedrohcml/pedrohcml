@@ -46,7 +46,7 @@ INFO = [
 ]
 
 FONT = "'Courier New', Consolas, 'DejaVu Sans Mono', monospace"
-FONT_SIZE = 20
+FONT_SIZE = 15
 CHAR_W = 9.0
 LINE_H = 20
 COLS = 58
