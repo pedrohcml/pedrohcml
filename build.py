@@ -51,6 +51,7 @@ CHAR_W = 11.4
 LINE_H = 24.7
 COLS = 58
 
+ART_WIDTH = 472
 ART_FONT_SIZE = 8.9
 ART_CHAR_W = 5.36
 ART_LINE_H = 12.8
@@ -184,6 +185,11 @@ def main():
 
     with open(os.path.join(ROOT, "ascii.txt"), encoding="utf-8") as f:
         ascii_rows = f.read().rstrip("\n").split("\n")
+        indent = min(len(r) - len(r.lstrip()) for r in ascii_rows if r.strip())
+        ascii_rows = [r[indent:] for r in ascii_rows]
+        global ART_CHAR_W, ART_FONT_SIZE
+        ART_CHAR_W = ART_WIDTH / max(len(r) for r in ascii_rows)
+        ART_FONT_SIZE = ART_CHAR_W / 0.6
     info_lines = build_info_lines(values)
 
     for name, theme in THEMES.items():
