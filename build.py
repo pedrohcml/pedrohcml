@@ -46,18 +46,18 @@ INFO = [
 ]
 
 FONT = "'Courier New', Consolas, 'DejaVu Sans Mono', monospace"
-FONT_SIZE = 15
-CHAR_W = 9.0
-LINE_H = 20
+FONT_SIZE = 19
+CHAR_W = 11.4
+LINE_H = 24
 COLS = 58
 
 ART_FONT_SIZE = 8.7
 ART_CHAR_W = 5.22
 ART_LINE_H = 10.6
 
-PAD = 13
+PAD = 22
 PAD_TOP = 26
-GAP = 10
+GAP = 26
 
 RAMP = " .'`,:;-~+=*xoO#%@"
 FLOOR = 4
