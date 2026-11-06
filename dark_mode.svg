@@ -1,49 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="976" height="460" viewBox="0 0 976 460">
+<svg xmlns="http://www.w3.org/2000/svg" width="1051" height="572" viewBox="0 0 1051 572">
 <style>
-    text { font-family: 'Courier New', Consolas, 'DejaVu Sans Mono', monospace; font-size: 16px; white-space: pre; }
-    .ascii { fill: #c9d1d9; }
+    text { font-family: 'Courier New', Consolas, 'DejaVu Sans Mono', monospace; white-space: pre; }
+    .ascii { fill: #c9d1d9; font-size: 8.7px; font-weight: 700; }
+    .info { font-size: 15px; }
     .key { fill: #ffa657; }
     .val { fill: #a5d6ff; }
     .dots { fill: #616e7f; }
     .rule { fill: #c9d1d9; }
     </style>
 <rect width="100%" height="100%" rx="15" fill="#161b22"/>
-<text x="15" y="30" class="ascii" xml:space="preserve">                                      </text>
-<text x="15" y="50" class="ascii" xml:space="preserve">             =-=--=+                  </text>
-<text x="15" y="70" class="ascii" xml:space="preserve">          =*==--:--++==               </text>
-<text x="15" y="90" class="ascii" xml:space="preserve">        -:==---:===++===-             </text>
-<text x="15" y="110" class="ascii" xml:space="preserve">       -:==-::::--=++=====            </text>
-<text x="15" y="130" class="ascii" xml:space="preserve">        --=-.:=+==+-=--=---:          </text>
-<text x="15" y="150" class="ascii" xml:space="preserve">          .:=+###*+:..:::::=          </text>
-<text x="15" y="170" class="ascii" xml:space="preserve">           :=+#%#%#=..:--:---         </text>
-<text x="15" y="190" class="ascii" xml:space="preserve">           -+#%@%%%%#=-----==-        </text>
-<text x="15" y="210" class="ascii" xml:space="preserve">           =+++**#%#+==++=.:-         </text>
-<text x="15" y="230" class="ascii" xml:space="preserve">          :++=--==*==-=+**--=         </text>
-<text x="15" y="250" class="ascii" xml:space="preserve">        ::-*%*++*+@%****%####         </text>
-<text x="15" y="270" class="ascii" xml:space="preserve">        -+=#####+%@@%***%%%#+         </text>
-<text x="15" y="290" class="ascii" xml:space="preserve">         *#%%#++**+*#%#+#%%#          </text>
-<text x="15" y="310" class="ascii" xml:space="preserve">           +%#+=*#++*#**##*           </text>
-<text x="15" y="330" class="ascii" xml:space="preserve">            *###*###%%%%%%=           </text>
-<text x="15" y="350" class="ascii" xml:space="preserve">            ++*#%%%##%%%#*            </text>
-<text x="15" y="370" class="ascii" xml:space="preserve">            ++*=*%%%%%#*#+            </text>
-<text x="15" y="390" class="ascii" xml:space="preserve">            --%*----=+##%*   .....:.. </text>
-<text x="15" y="410" class="ascii" xml:space="preserve">            :#%%*===*#%%%+=-=:.-:.....</text>
-<text x="15" y="430" class="ascii" xml:space="preserve">     .--++=+@@@%%#++*##+-==-==:::.....</text>
-<text x="400" y="30" xml:space="preserve"><tspan class="val">pedro@cavalcante </tspan><tspan class="rule">-----------------------------------------</tspan></text>
-<text x="400" y="50" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Role</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................... </tspan><tspan class="val">Software Developer</tspan></text>
-<text x="400" y="70" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Company</tspan><tspan class="rule">:</tspan><tspan class="dots"> ..................................... </tspan><tspan class="val">Capgemini</tspan></text>
-<text x="400" y="90" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Uptime</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................. </tspan><tspan class="val">24 years, 7 months</tspan></text>
-<text x="400" y="110" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Education</tspan><tspan class="rule">:</tspan><tspan class="dots"> ................ </tspan><tspan class="val">B.Sc. Computer Science, UNIP</tspan></text>
-<text x="400" y="130" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Focus</tspan><tspan class="rule">:</tspan><tspan class="dots"> ...................... </tspan><tspan class="val">Data &amp; AI, Dynamics 365 CE</tspan></text>
-<text x="400" y="150" xml:space="preserve"><tspan class="dots">.</tspan></text>
-<text x="400" y="170" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Languages.Programming</tspan><tspan class="rule">:</tspan><tspan class="dots"> .......... </tspan><tspan class="val">Python, JavaScript, C#</tspan></text>
-<text x="400" y="190" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Languages.Real</tspan><tspan class="rule">:</tspan><tspan class="dots"> ........... </tspan><tspan class="val">Portuguese, English, Spanish</tspan></text>
-<text x="400" y="210" xml:space="preserve"><tspan class="dots">.</tspan></text>
-<text x="400" y="230" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Hobbies.Computer</tspan><tspan class="rule">:</tspan><tspan class="dots"> ........ </tspan><tspan class="val">Gaming, Machine Learning, NLP</tspan></text>
-<text x="400" y="250" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Hobbies.Real</tspan><tspan class="rule">:</tspan><tspan class="dots"> ... </tspan><tspan class="val">Mountaineering, Heraldry, Tabletop RPG</tspan></text>
-<text x="400" y="270" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Hobbies.Other</tspan><tspan class="rule">:</tspan><tspan class="dots"> ...... </tspan><tspan class="val">Genealogy, Medieval History, Space</tspan></text>
-<text x="400" y="290" xml:space="preserve"><tspan class="dots">.</tspan></text>
-<text x="400" y="310" xml:space="preserve"><tspan class="rule">- Contact ------------------------------------------------</tspan></text>
-<text x="400" y="330" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Email.Personal</tspan><tspan class="rule">:</tspan><tspan class="dots"> ..................... </tspan><tspan class="val">phcmlima@gmail.com</tspan></text>
-<text x="400" y="350" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="rule">:</tspan><tspan class="dots"> ..................................... </tspan><tspan class="val">phcmlima</tspan></text>
+<text x="22" y="34.6" class="ascii" xml:space="preserve">                             =~;;</text>
+<text x="22" y="45.2" class="ascii" xml:space="preserve">                           +*+~--~+--=~~***=*</text>
+<text x="22" y="55.8" class="ascii" xml:space="preserve">                          ==~~-~++~+++~~~~==*OO</text>
+<text x="22" y="66.4" class="ascii" xml:space="preserve">                      *ox+--;-~-~*~;-----~==+*~~-;-+</text>
+<text x="22" y="77.0" class="ascii" xml:space="preserve">                    *-*xxx**=+==~--;-;;~++==o#=**+--+=</text>
+<text x="22" y="87.6" class="ascii" xml:space="preserve">                 =*;:=*x+-;;~++~-;;-~=~---~~~o==**+~~~=+</text>
+<text x="22" y="98.2" class="ascii" xml:space="preserve">                =-:,-+++~-;-~~+~;;-~~++==+~+=**+-=*=+~+=+--+</text>
+<text x="22" y="108.8" class="ascii" xml:space="preserve">              x~;:-x**oo*~--~+~-;;--=+====**o**o~++*=-~=++~+</text>
+<text x="22" y="119.4" class="ascii" xml:space="preserve">             x-:;+o~-=x+-;--+*-;;;;~~;--~+*=*x+=+~++=+~==~+~*+</text>
+<text x="22" y="130.0" class="ascii" xml:space="preserve">            +=-:~O;+=~+~;;~;,:;;;----;~+--x*=x+==~~~+--+*~~+=~-</text>
+<text x="22" y="140.6" class="ascii" xml:space="preserve">            ~=*;~~;==-*=;::,,:;;-+~+~~~+-=x~~*+++~~-~++=*~--~+~++</text>
+<text x="22" y="151.2" class="ascii" xml:space="preserve">              +-;;=++==~;,:;-+=**x*==+~~~*=~;-==~-~-~--+=~--;~~-+~</text>
+<text x="22" y="161.8" class="ascii" xml:space="preserve">                  ++:;;-;-~+=*oxoooOOOx===++::~-~:-;-+-;--;;----~+=</text>
+<text x="22" y="172.4" class="ascii" xml:space="preserve">                    -,,;-~+=*oooOooOOOxxox++;,::;;:::;~~-;;;;--;-==-</text>
+<text x="22" y="183.0" class="ascii" xml:space="preserve">                       ~~~+=**xooOO#%xoOOo*=~,,,,-;:;;;----;:;;;~+~~+</text>
+<text x="22" y="193.6" class="ascii" xml:space="preserve">                       ~~+===*xoOO###oO###x*=~,,,;-;;~~;;;--::;~---~+~</text>
+<text x="22" y="204.2" class="ascii" xml:space="preserve">                       ;~+==*xOOOO#OOO#O##Ooxx+;,::;~~+=+==~~~+++~~~~+*</text>
+<text x="22" y="214.8" class="ascii" xml:space="preserve">                       -+==*oOO%@@%#%%#O###%OOOx~-;;;-~~--~+~~+-+=***++</text>
+<text x="22" y="225.4" class="ascii" xml:space="preserve">                       ~+=**xO##%@@%%%%%%%%#O####Ox=+-;;;;;-----++-~+~:</text>
+<text x="22" y="236.0" class="ascii" xml:space="preserve">                       ++=***###O######OO##OOooxx=~~~+++====+,,,;-;-;~</text>
+<text x="22" y="246.6" class="ascii" xml:space="preserve">                       =*x+~~~~---~~=*ooO###o**~-~++**xox=+~~--;,;-+~;</text>
+<text x="22" y="257.2" class="ascii" xml:space="preserve">                     **=+~~~+++~~~+=+~~~~++~-++~-~+=**=*o###+--+=;--+</text>
+<text x="22" y="267.8" class="ascii" xml:space="preserve">                   :;;;x#*+==~---~-~~~--#OO*:ox~~-::-==+*ooo=~;:;;-~o</text>
+<text x="22" y="278.4" class="ascii" xml:space="preserve">                 ,:,,=~O@O*+~;~-:;-=~~-;O@@@*;Ox=++=xoo*=*o#xoO;~x*=xx</text>
+<text x="22" y="289.0" class="ascii" xml:space="preserve">               -;--:,+o+%@@%O*====+++x~-@@@@@*~Oo***==*oO#%%=%@-o@@#O*</text>
+<text x="22" y="299.6" class="ascii" xml:space="preserve">               +-=+~;~=~~o%@@@%#ooo#@O;O@@@@%%x+o###O###%@%*O@@o=o%%O</text>
+<text x="22" y="310.2" class="ascii" xml:space="preserve">                =+=+;=@#o=*o%@%%##Oo*;o@%@@@@%%%*~=xxoox*OO%%%%#xx%%=</text>
+<text x="22" y="320.8" class="ascii" xml:space="preserve">                O#o~;~%%@@#*=====+==~x@@%@%%%@#%@#=++=*o#%%%%%%o#%#o</text>
+<text x="22" y="331.4" class="ascii" xml:space="preserve">                 O%#x~x%%#%@o=**xxx*=%#OO#OoOOOoxO#o===xO####%##@@o</text>
+<text x="22" y="342.0" class="ascii" xml:space="preserve">                  *%@@%O%####x=***===#*;;~+==xxoO#%%O*=+=o##O#%O%x</text>
+<text x="22" y="352.6" class="ascii" xml:space="preserve">                    *@@####Ooo*====+O@@O+--~+=xoO##%%#*x+=##oO%*</text>
+<text x="22" y="363.2" class="ascii" xml:space="preserve">                     :~~o#O#OO*=++~+%%#OOo*xooxxxxx**==xxx##o#%=</text>
+<text x="22" y="373.8" class="ascii" xml:space="preserve">                        ~#####Ox==+-:;+x*x*xxxO#%%%==OOOOO##O#%</text>
+<text x="22" y="384.4" class="ascii" xml:space="preserve">                        ,*OOOOO#%#Oxo#OxxxxOxxoxOOO%%##OO###O#O</text>
+<text x="22" y="395.0" class="ascii" xml:space="preserve">                        +;xoooooO##%%@%%%%%%%#OO%%%%######OOO#</text>
+<text x="22" y="405.6" class="ascii" xml:space="preserve">                        *==*xx*xoOO#%%###Ox*===xoO#####OOOOOO+</text>
+<text x="22" y="416.2" class="ascii" xml:space="preserve">                        ****===*xOOO%%%%%%########%###OooooO~</text>
+<text x="22" y="426.8" class="ascii" xml:space="preserve">                        ****=O*~+=*o#%%@@@@%%%%%%%%#O#o*=*O@~</text>
+<text x="22" y="437.4" class="ascii" xml:space="preserve">                         ***=*@o~~~~*o###%#######OOOo*+*o#%@+</text>
+<text x="22" y="448.0" class="ascii" xml:space="preserve">                         x*~,-@@O+~~-~~~+====++===++=*oOO#%@=            ,,,,,,</text>
+<text x="22" y="458.6" class="ascii" xml:space="preserve">                         -,::-@@%#*~~~~---------~=oOO#O###%@x        ::;;;:,:::;;;------</text>
+<text x="22" y="469.2" class="ascii" xml:space="preserve">                         +~;;=@%#%#x~~~~~~~~~~=*oOO######%%%+   ;-~=~:::;~~-;;;:;;;--;;:</text>
+<text x="22" y="479.8" class="ascii" xml:space="preserve">                         ,,-o@%%####o++++++++=xoOOOO#####%%=-=*+~-~+=~;,:;;-~~~;:::;;:::</text>
+<text x="22" y="490.4" class="ascii" xml:space="preserve">          ;,,,,:-=x=+,,,:+#@@@%%#####O*+++++++=oOO#####%%O~-++++~-~~==~;,:;--~~-;:::::;:</text>
+<text x="22" y="501.0" class="ascii" xml:space="preserve">       ,,:;,;~+****+++-x@@@@@%%%%#####Ox====****oOO##%#x~;~~++++~-~++=+~;:;;-~~-:::;::;;</text>
+<text x="22" y="511.6" class="ascii" xml:space="preserve">    ;:,;~*xooxx=++~~=+~~x#@@@@@%%%######Ox*****xo##O*~;-~~~+++++~~~++==+--;:;;::;;:::;;;</text>
+<text x="22" y="522.2" class="ascii" xml:space="preserve"> ,:,~*xxxx**=xoxx*==+++=+~~=xO#%%%%%######o**=+++~------~~+++++++++++==+~-;::::;-;;;;;;;</text>
+<text x="22" y="532.8" class="ascii" xml:space="preserve">;+*x*****======*xxx**====+++++++++=****===++-;---;;---~~~~+++~++++~++==+~-;:::::;;;;;;;;</text>
+<text x="22" y="543.4" class="ascii" xml:space="preserve">***xxxxxx*x**=++~~++=+++=========++++++~~~~~~~---~~~~~~~~++~~+++++~++=*+++~-;:::;:::;;;;</text>
+<text x="22" y="554.0" class="ascii" xml:space="preserve">xx*******xx*xxxxx**===*==*****=****************=~--~~~~~~~~~~~+++~~+++*+++~~+~-;;;;;:;;;</text>
+<text x="507.4" y="56.0" class="info" xml:space="preserve"><tspan class="val">pedro@cavalcante </tspan><tspan class="rule">-----------------------------------------</tspan></text>
+<text x="507.4" y="76.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Role</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................... </tspan><tspan class="val">Software Developer</tspan></text>
+<text x="507.4" y="96.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Company</tspan><tspan class="rule">:</tspan><tspan class="dots"> ..................................... </tspan><tspan class="val">Capgemini</tspan></text>
+<text x="507.4" y="116.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Uptime</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................. </tspan><tspan class="val">24 years, 7 months</tspan></text>
+<text x="507.4" y="136.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Education</tspan><tspan class="rule">:</tspan><tspan class="dots"> ................ </tspan><tspan class="val">B.Sc. Computer Science, UNIP</tspan></text>
+<text x="507.4" y="156.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Focus</tspan><tspan class="rule">:</tspan><tspan class="dots"> ...................... </tspan><tspan class="val">Data &amp; AI, Dynamics 365 CE</tspan></text>
+<text x="507.4" y="176.0" class="info" xml:space="preserve"><tspan class="dots">.</tspan></text>
+<text x="507.4" y="196.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Languages.Programming</tspan><tspan class="rule">:</tspan><tspan class="dots"> .......... </tspan><tspan class="val">Python, JavaScript, C#</tspan></text>
+<text x="507.4" y="216.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Languages.Real</tspan><tspan class="rule">:</tspan><tspan class="dots"> ........... </tspan><tspan class="val">Portuguese, English, Spanish</tspan></text>
+<text x="507.4" y="236.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">IDE</tspan><tspan class="rule">:</tspan><tspan class="dots"> ....................... </tspan><tspan class="val">Visual Studio Code, Jupyter</tspan></text>
+<text x="507.4" y="256.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Stack.Data</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............. </tspan><tspan class="val">Dataverse, PostgreSQL, MongoDB</tspan></text>
+<text x="507.4" y="276.0" class="info" xml:space="preserve"><tspan class="dots">.</tspan></text>
+<text x="507.4" y="296.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Hobbies.Computer</tspan><tspan class="rule">:</tspan><tspan class="dots"> ........ </tspan><tspan class="val">Gaming, Machine Learning, NLP</tspan></text>
+<text x="507.4" y="316.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Hobbies.Real</tspan><tspan class="rule">:</tspan><tspan class="dots"> ... </tspan><tspan class="val">Mountaineering, Heraldry, Tabletop RPG</tspan></text>
+<text x="507.4" y="336.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Hobbies.Other</tspan><tspan class="rule">:</tspan><tspan class="dots"> ...... </tspan><tspan class="val">Genealogy, Medieval History, Space</tspan></text>
+<text x="507.4" y="356.0" class="info" xml:space="preserve"><tspan class="dots">.</tspan></text>
+<text x="507.4" y="376.0" class="info" xml:space="preserve"><tspan class="rule">- Contact ------------------------------------------------</tspan></text>
+<text x="507.4" y="396.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Email.Personal</tspan><tspan class="rule">:</tspan><tspan class="dots"> ..................... </tspan><tspan class="val">phcmlima@gmail.com</tspan></text>
+<text x="507.4" y="416.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="rule">:</tspan><tspan class="dots"> ..................................... </tspan><tspan class="val">phcmlima</tspan></text>
+<text x="507.4" y="436.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">GitHub</tspan><tspan class="rule">:</tspan><tspan class="dots"> ...................................... </tspan><tspan class="val">pedrohcml</tspan></text>
+<text x="507.4" y="456.0" class="info" xml:space="preserve"><tspan class="dots">.</tspan></text>
+<text x="507.4" y="476.0" class="info" xml:space="preserve"><tspan class="rule">- GitHub Stats -------------------------------------------</tspan></text>
+<text x="507.4" y="496.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Repos</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................................... </tspan><tspan class="val">1</tspan></text>
+<text x="507.4" y="516.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Stars</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................................... </tspan><tspan class="val">0</tspan></text>
+<text x="507.4" y="536.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Followers</tspan><tspan class="rule">:</tspan><tspan class="dots"> ........................................... </tspan><tspan class="val">1</tspan></text>
 </svg>
