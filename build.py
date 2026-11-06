@@ -55,9 +55,9 @@ ART_FONT_SIZE = 8.7
 ART_CHAR_W = 5.22
 ART_LINE_H = 10.6
 
-PAD = 22
+PAD = 12
 PAD_TOP = 26
-GAP = 16
+GAP = 5
 
 RAMP = " .'`,:;-~+=*xoO#%@"
 FLOOR = 4
