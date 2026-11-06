@@ -48,12 +48,12 @@ INFO = [
 FONT = "'Courier New', Consolas, 'DejaVu Sans Mono', monospace"
 FONT_SIZE = 19
 CHAR_W = 11.4
-LINE_H = 24
+LINE_H = 24.7
 COLS = 58
 
-ART_FONT_SIZE = 10.1
-ART_CHAR_W = 6.06
-ART_LINE_H = 13.0
+ART_FONT_SIZE = 8.9
+ART_CHAR_W = 5.36
+ART_LINE_H = 12.8
 
 PAD = 10
 PAD_TOP = 26
