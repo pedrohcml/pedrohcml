@@ -1,12 +1,4 @@
 #!/usr/bin/env python3
-"""
-Uso local:
-    BIRTHDATE=2002-03-20 python3 build.py --user pedrohcml
-    python3 build.py --user pedrohcml --uptime "24 years, 7 months"   # sem data de nascimento
-
-A data de nascimento NÃO fica gravada no repositório: ela vem da variável de ambiente
-BIRTHDATE (no GitHub Actions, de um secret).
-"""
 import argparse
 import os
 from datetime import date
@@ -107,7 +99,7 @@ def fetch_stats(user: str) -> dict:
                 break
             page += 1
         out["stars"] = str(stars)
-    except Exception as exc:  # sem rede, limite de taxa, usuário inexistente...
+    except Exception as exc:  
         print(f"aviso: não consegui buscar estatísticas do GitHub ({exc})")
     return out
 
@@ -140,7 +132,7 @@ def render(theme: dict, ascii_rows: list, info_lines: list) -> str:
     info_x = PAD + art_w + GAP
     width = int(info_x + COLS * CHAR_W + PAD)
     height = int(PAD_TOP + body_h + PAD - 6)
-    art_y0 = PAD_TOP + (body_h - art_h) / 2        # centraliza a arte na vertical
+    art_y0 = PAD_TOP + (body_h - art_h) / 2 
     info_y0 = PAD_TOP + (body_h - info_h) / 2
 
     css = f"""
