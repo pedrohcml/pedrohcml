@@ -208,7 +208,9 @@ def render(theme: dict, ascii_rows: list, info_lines: list, lang_data: list) -> 
     """
     svg_ns = "http://" + "www.w3.org" + "/2000/svg"
     parts = [
-    f'<svg xmlns="{svg_ns}" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+        f'<svg xmlns="{svg_ns}" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+        f"<style>{css}</style>",
+        f'<rect width="100%" height="100%" rx="15" fill="{theme["bg"]}"/>',
     ]
     
     for i, row in enumerate(ascii_rows):
