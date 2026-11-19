@@ -165,9 +165,9 @@ def build_info_lines(values: dict):
             segs = []
             for idx, item_l in enumerate(values.get("lang_data", [])):
                 if idx > 0:
-                    segs.append(("dots", "  "))
-                segs.append((f"lang{idx}", "■ "))
-                segs.append(("val", f"{item_l['name']} {item_l['bars']}%"))
+                    segs.append(("dots legend", "  "))
+                segs.append((f"lang{idx} legend", "■ "))
+                segs.append(("val legend", f"{item_l['name']} {item_l['bars']}%"))
             lines.append(segs or [("dots", ".")])
         else:
             val_str = value.format(**values)
@@ -195,11 +195,20 @@ def render(theme: dict, ascii_rows: list, info_lines: list, lang_data: list) -> 
         for idx, item_l in enumerate(lang_data)
     )
 
+    # Largura disponível para a coluna de informações. Fontes monoespaçadas têm
+    # ~0.6em por caractere; usar 0.62 deixa uma pequena margem de segurança.
+    info_w = COLS * CHAR_W
+    legend_chars = sum(len(f"■ {l['name']} {l['bars']}%") for l in lang_data) + 2 * max(0, len(lang_data) - 1)
+    legend_fs = min(FONT_SIZE, info_w / (max(1, legend_chars) * 0.62))
+    bar_chars = sum(l["bars"] for l in lang_data)
+    bar_fs = min(FONT_SIZE, info_w / (max(1, bar_chars) * 0.62))
+
     css = f"""
     text {{ font-family: {FONT}; white-space: pre; }}
     .ascii {{ fill: {theme['ascii']}; font-size: {ART_FONT_SIZE}px; font-weight: 700; }}
     .info {{ font-size: {FONT_SIZE}px; }}
-    .bar {{ font-size: 11px; letter-spacing: 0.2px; }}
+    .bar {{ font-size: {bar_fs:.2f}px; }}
+    .legend {{ font-size: {legend_fs:.2f}px; }}
     .key {{ fill: {theme['key']}; }}
     .val {{ fill: {theme['val']}; }}
     .dots {{ fill: {theme['dots']}; }}
