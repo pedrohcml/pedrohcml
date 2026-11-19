@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg xmlns="http://w3.org" width="1163" height="696" viewBox="0 0 1163 696">
 <style>
     text { font-family: 'Courier New', Consolas, 'DejaVu Sans Mono', monospace; white-space: pre; }
@@ -11,6 +12,9 @@
     
     </style>
 <rect width="100%" height="100%" rx="15" fill="#161b22"/>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" width="1163" height="696" viewBox="0 0 1163 696">
+>>>>>>> 5008545 ((fix): build.py)
 <text x="10" y="88.4" class="ascii" xml:space="preserve">                                                                                                               </text>
 <text x="10" y="97.1" class="ascii" xml:space="preserve">                                                                                                               </text>
 <text x="10" y="105.8" class="ascii" xml:space="preserve">                                                                                                               </text>
@@ -97,9 +101,17 @@
 <text x="492.0" y="515.0" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">GitHub</tspan><tspan class="rule">:</tspan><tspan class="dots"> ...................................... </tspan><tspan class="val">pedrohcml</tspan></text>
 <text x="492.0" y="539.7" class="info" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="492.0" y="564.4" class="info" xml:space="preserve"><tspan class="rule">- GitHub Stats -------------------------------------------</tspan></text>
+<<<<<<< HEAD
 <text x="492.0" y="589.1" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Repos</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................................... </tspan><tspan class="val">-</tspan></text>
 <text x="492.0" y="613.8" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Stars</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................................... </tspan><tspan class="val">-</tspan></text>
 <text x="492.0" y="638.5" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Followers</tspan><tspan class="rule">:</tspan><tspan class="dots"> ........................................... </tspan><tspan class="val">-</tspan></text>
 <text x="492.0" y="663.2" class="info" xml:space="preserve"><tspan class="dots">Sem dados de linguagem</tspan></text>
 <text x="492.0" y="687.9" class="info" xml:space="preserve"><tspan class="dots">.</tspan></text>
+=======
+<text x="492.0" y="589.1" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Repos</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................................... </tspan><tspan class="val">4</tspan></text>
+<text x="492.0" y="613.8" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Stars</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................................... </tspan><tspan class="val">0</tspan></text>
+<text x="492.0" y="638.5" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Followers</tspan><tspan class="rule">:</tspan><tspan class="dots"> ........................................... </tspan><tspan class="val">4</tspan></text>
+<text x="492.0" y="663.2" class="info" xml:space="preserve"><tspan class="bar lang0">|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</tspan><tspan class="bar lang1">||||||||||||||||||||||||</tspan><tspan class="bar lang2">|||||</tspan><tspan class="bar lang3">||</tspan></text>
+<text x="492.0" y="687.9" class="info" xml:space="preserve"><tspan class="lang0">■ </tspan><tspan class="val">Jupyter Notebook 69%</tspan><tspan class="dots">  </tspan><tspan class="lang1">■ </tspan><tspan class="val">Python 24%</tspan><tspan class="dots">  </tspan><tspan class="lang2">■ </tspan><tspan class="val">JavaScript 5%</tspan><tspan class="dots">  </tspan><tspan class="lang3">■ </tspan><tspan class="val">CSS 2%</tspan></text>
+>>>>>>> 5008545 ((fix): build.py)
 </svg>

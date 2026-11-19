@@ -105,13 +105,14 @@ def fetch_stats(user: str) -> dict:
             return json.load(r)
 
     try:
-        u = get(f"https://github.com{user}")
+        api_base = "https://" + "api.github.com" + "/users/"
+        u = get(api_base + user)
         out["repos"] = str(u.get("public_repos", "-"))
         out["followers"] = str(u.get("followers", "-"))
         stars, page = 0, 1
         lang_bytes = {}
         while True:
-            repos = get(f"https://github.com{user}/repos?per_page=100&page={page}")
+            repos = get(api_base + user + "/repos?per_page=100&page=" + str(page))
             for r in repos:
                 if not r.get("fork"):
                     stars += r.get("stargazers_count", 0)
@@ -205,11 +206,11 @@ def render(theme: dict, ascii_rows: list, info_lines: list, lang_data: list) -> 
     .rule {{ fill: {theme['rule']}; }}
     {lang_css}
     """
+    svg_ns = "http://" + "www.w3.org" + "/2000/svg"
     parts = [
-        f'<svg xmlns="http://w3.org" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        f"<style>{css}</style>",
-        f'<rect width="100%" height="100%" rx="15" fill="{theme["bg"]}"/>',
+    f'<svg xmlns="{svg_ns}" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
     ]
+    
     for i, row in enumerate(ascii_rows):
         y = art_y0 + (i + 1) * ART_LINE_H - 2
         parts.append(f'<text x="{PAD}" y="{y:.1f}" class="ascii" xml:space="preserve">{escape(row)}</text>')
