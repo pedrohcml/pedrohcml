@@ -3,7 +3,8 @@
     text { font-family: 'Courier New', Consolas, 'DejaVu Sans Mono', monospace; white-space: pre; }
     .ascii { fill: #c9d1d9; font-size: 7.087087087087087px; font-weight: 700; }
     .info { font-size: 19px; }
-    .bar { font-size: 11px; letter-spacing: 0.2px; }
+    .bar { font-size: 10.66px; }
+    .legend { font-size: 16.93px; }
     .key { fill: #ffa657; }
     .val { fill: #a5d6ff; }
     .dots { fill: #616e7f; }
@@ -104,5 +105,5 @@
 <text x="492.0" y="613.8" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Stars</tspan><tspan class="rule">:</tspan><tspan class="dots"> ............................................... </tspan><tspan class="val">0</tspan></text>
 <text x="492.0" y="638.5" class="info" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="key">Followers</tspan><tspan class="rule">:</tspan><tspan class="dots"> ........................................... </tspan><tspan class="val">4</tspan></text>
 <text x="492.0" y="663.2" class="info" xml:space="preserve"><tspan class="bar lang0">|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</tspan><tspan class="bar lang1">||||||||||||||||||||||||</tspan><tspan class="bar lang2">|||||</tspan><tspan class="bar lang3">||</tspan></text>
-<text x="492.0" y="687.9" class="info" xml:space="preserve"><tspan class="lang0">■ </tspan><tspan class="val">Jupyter Notebook 69%</tspan><tspan class="dots">  </tspan><tspan class="lang1">■ </tspan><tspan class="val">Python 24%</tspan><tspan class="dots">  </tspan><tspan class="lang2">■ </tspan><tspan class="val">JavaScript 5%</tspan><tspan class="dots">  </tspan><tspan class="lang3">■ </tspan><tspan class="val">CSS 2%</tspan></text>
+<text x="492.0" y="687.9" class="info" xml:space="preserve"><tspan class="lang0 legend">■ </tspan><tspan class="val legend">Jupyter Notebook 69%</tspan><tspan class="dots legend">  </tspan><tspan class="lang1 legend">■ </tspan><tspan class="val legend">Python 24%</tspan><tspan class="dots legend">  </tspan><tspan class="lang2 legend">■ </tspan><tspan class="val legend">JavaScript 5%</tspan><tspan class="dots legend">  </tspan><tspan class="lang3 legend">■ </tspan><tspan class="val legend">CSS 2%</tspan></text>
 </svg>
