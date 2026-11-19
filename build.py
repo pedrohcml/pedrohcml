@@ -3,9 +3,9 @@ import argparse
 import os
 from datetime import date
 from html import escape
+from operator import itemgetter
 import urllib.request
 import json
-from operator import itemgetter
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -17,27 +17,27 @@ INFO = [
     ("kv", "Uptime", "{uptime}"),
     ("kv", "Education", "B.Sc. Computer Science, UNIP"),
     ("kv", "Focus", "Data & AI, Dynamics 365 CE"),
-    ("blank",),
+    ("blank", "", ""),
     ("kv", "Languages.Programming", "Python, JavaScript, C#"),
     ("kv", "Languages.Real", "Portuguese, English, Spanish"),
     ("kv", "IDE", "Visual Studio Code, Jupyter"),
     ("kv", "Stack.Data", "Dataverse, PostgreSQL, MongoDB"),
-    ("blank",),
+    ("blank", "", ""),
     ("kv", "Hobbies.Computer", "Gaming, Machine Learning, NLP"),
     ("kv", "Hobbies.Real", "Mountaineering, Heraldry, Tabletop RPG"),
     ("kv", "Hobbies.Other", "Genealogy, Medieval History, Space"),
-    ("blank",),
-    ("section", "Contact"),
+    ("blank", "", ""),
+    ("section", "Contact", ""),
     ("kv", "Email.Personal", "phcmlima@gmail.com"),
     ("kv", "LinkedIn", "phcmlima"),
     ("kv", "GitHub", "pedrohcml"),
-    ("blank",),
-    ("section", "GitHub Stats"),
+    ("blank", "", ""),
+    ("section", "GitHub Stats", ""),
     ("kv", "Repos", "{repos}"),
     ("kv", "Stars", "{stars}"),
     ("kv", "Followers", "{followers}"),
-    ("langbar",),
-    ("langlegend",),
+    ("langbar", "", ""),
+    ("langlegend", "", ""),
 ]
 
 FONT = "'Courier New', Consolas, 'DejaVu Sans Mono', monospace"
@@ -125,18 +125,21 @@ def fetch_stats(user: str) -> dict:
 
         lang_list = []
         if lang_bytes:
-            top = sorted(lang_bytes.items(), key=lambda item: item[1], reverse=True)[:5]
+            top = sorted(lang_bytes.items(), key=itemgetter(1), reverse=True)[:5]
             top_total = sum(v for _, v in top)
             
             raw = [(k, (v / top_total) * 100) for k, v in top]
-            ints = [int(x[1]) for x in raw]
-            rema = sorted(range(len(raw)), key=lambda i: raw[i][1] - ints[i], reverse=True)
-            for i in range(100 - sum(ints)):
-                ints[rema[i]] += 1
+            ints = [int(pct) for _, pct in raw]
+            remainders = sorted(
+                [(pct - int(pct), idx) for idx, (_, pct) in enumerate(raw)],
+                reverse=True
+            )
+            for _, idx in remainders[:100 - sum(ints)]:
+                ints[idx] += 1
 
-            for i, ((lang, _), bars) in enumerate(zip(raw, ints)):
+            for idx, ((lang, _), bars) in enumerate(zip(raw, ints)):
                 if bars > 0:
-                    color = LANG_COLORS.get(lang, FALLBACK_COLORS[i % len(FALLBACK_COLORS)])
+                    color = LANG_COLORS.get(lang, FALLBACK_COLORS[idx % len(FALLBACK_COLORS)])
                     lang_list.append({"name": lang, "bars": bars, "color": color})
         out["lang_data"] = lang_list
 
@@ -145,35 +148,32 @@ def fetch_stats(user: str) -> dict:
     return out
 
 def build_info_lines(values: dict):
-    lines = [[("val", HANDLE + " "), ("rule", "-" * (COLS - len(HANDLE) - 1))]]
-    for item in INFO:
-        kind = item[0]
+    lines = [[("val", HANDLE + " ", ""), ("rule", "-" * (COLS - len(HANDLE) - 1), "")]]
+    for kind, key, value in INFO:
         if kind == "blank":
-            lines.append([("dots", ".", None)])
+            lines.append([("dots", ".", "")])
         elif kind == "section":
-            _, title_text = item
-            title = f"- {title_text} "
-            lines.append([("rule", title + "-" * (COLS - len(title)), None)])
+            title = f"- {key} "
+            lines.append([("rule", title + "-" * (COLS - len(title)), "")])
         elif kind == "langbar":
             segs = []
             for item_l in values.get("lang_data", []):
                 segs.append(("bar", "|" * item_l["bars"], item_l["color"]))
-            lines.append(segs or [("dots", "Sem dados de linguagem", None)])
+            lines.append(segs or [("dots", "Sem dados de linguagem", "")])
         elif kind == "langlegend":
             segs = []
             for idx, item_l in enumerate(values.get("lang_data", [])):
                 if idx > 0:
-                    segs.append(("dots", "  ", None))
+                    segs.append(("dots", "  ", ""))
                 segs.append(("legend_dot", "■ ", item_l["color"]))
-                segs.append(("val", f"{item_l['name']} {item_l['bars']}%", None))
-            lines.append(segs or [("dots", ".", None)])
+                segs.append(("val", f"{item_l['name']} {item_l['bars']}%", ""))
+            lines.append(segs or [("dots", ".", "")])
         else:
-            _, key, value = item
-            value = value.format(**values)
-            n = max(2, COLS - 5 - len(key) - len(value))
+            val_str = value.format(**values)
+            n = max(2, COLS - 5 - len(key) - len(val_str))
             lines.append([
-                ("dots", ". ", None), ("key", key, None), ("rule", ":", None),
-                ("dots", " " + "." * n + " ", None), ("val", value, None),
+                ("dots", ". ", ""), ("key", key, ""), ("rule", ":", ""),
+                ("dots", " " + "." * n + " ", ""), ("val", val_str, ""),
             ])
     return lines
 
@@ -207,14 +207,13 @@ def render(theme: dict, ascii_rows: list, info_lines: list) -> str:
     for i, row in enumerate(ascii_rows):
         y = art_y0 + (i + 1) * ART_LINE_H - 2
         parts.append(f'<text x="{PAD}" y="{y:.1f}" class="ascii" xml:space="preserve">{escape(row)}</text>')
-        for i, segs in enumerate(info_lines):
-            y = info_y0 + (i + 1) * LINE_H - 5
-            spans = ""
-            for cls, txt, *extra in segs:
-                color = extra[0] if extra else None
-                style = f' style="fill:{color}"' if color else ""
-                spans += f'<tspan class="{cls}"{style}>{escape(txt)}</tspan>'
-            parts.append(f'<text x="{info_x:.1f}" y="{y:.1f}" class="info" xml:space="preserve">{spans}</text>')
+    for i, segs in enumerate(info_lines):
+        y = info_y0 + (i + 1) * LINE_H - 5
+        spans = ""
+        for cls, txt, color in segs:
+            style = f' style="fill:{color}"' if color else ""
+            spans += f'<tspan class="{cls}"{style}>{escape(txt)}</tspan>'
+        parts.append(f'<text x="{info_x:.1f}" y="{y:.1f}" class="info" xml:space="preserve">{spans}</text>')
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
 
