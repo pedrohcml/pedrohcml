@@ -1,4 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1163" height="696" viewBox="0 0 1163 696">
+<style>
+    text { font-family: 'Courier New', Consolas, 'DejaVu Sans Mono', monospace; white-space: pre; }
+    .ascii { fill: #24292f; font-size: 7.087087087087087px; font-weight: 700; }
+    .info { font-size: 19px; }
+    .bar { font-size: 11px; letter-spacing: 0.2px; }
+    .key { fill: #953800; }
+    .val { fill: #0a3069; }
+    .dots { fill: #c2cfde; }
+    .rule { fill: #24292f; }
+    .lang0 { fill: #DA5B0B; }
+    .lang1 { fill: #3572A5; }
+    .lang2 { fill: #f1e05a; }
+    .lang3 { fill: #563d7c; }
+    </style>
+<rect width="100%" height="100%" rx="15" fill="#f6f8fa"/>
 <text x="10" y="88.4" class="ascii" xml:space="preserve">                                                                                                               </text>
 <text x="10" y="97.1" class="ascii" xml:space="preserve">                                                                                                               </text>
 <text x="10" y="105.8" class="ascii" xml:space="preserve">                                                                                                               </text>
