@@ -144,7 +144,6 @@ def fetch_stats(user: str) -> dict:
     return out
 
 def build_info_lines(values: dict):
-    """Devolve lista de linhas; cada linha é uma lista de (classe, texto) ou (classe, texto, cor)."""
     lines = [[("val", HANDLE + " "), ("rule", "-" * (COLS - len(HANDLE) - 1))]]
     for item in INFO:
         kind = item[0]
