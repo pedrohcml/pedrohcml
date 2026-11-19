@@ -148,36 +148,36 @@ def fetch_stats(user: str) -> dict:
     return out
 
 def build_info_lines(values: dict):
-    lines = [[("val", HANDLE + " ", ""), ("rule", "-" * (COLS - len(HANDLE) - 1), "")]]
+    lines = [[("val", HANDLE + " "), ("rule", "-" * (COLS - len(HANDLE) - 1))]]
     for kind, key, value in INFO:
         if kind == "blank":
-            lines.append([("dots", ".", "")])
+            lines.append([("dots", ".")])
         elif kind == "section":
             title = f"- {key} "
-            lines.append([("rule", title + "-" * (COLS - len(title)), "")])
+            lines.append([("rule", title + "-" * (COLS - len(title)))])
         elif kind == "langbar":
             segs = []
-            for item_l in values.get("lang_data", []):
-                segs.append(("bar", "|" * item_l["bars"], item_l["color"]))
-            lines.append(segs or [("dots", "Sem dados de linguagem", "")])
+            for idx, item_l in enumerate(values.get("lang_data", [])):
+                segs.append((f"bar lang{idx}", "|" * item_l["bars"]))
+            lines.append(segs or [("dots", "Sem dados de linguagem")])
         elif kind == "langlegend":
             segs = []
             for idx, item_l in enumerate(values.get("lang_data", [])):
                 if idx > 0:
-                    segs.append(("dots", "  ", ""))
-                segs.append(("legend_dot", "■ ", item_l["color"]))
-                segs.append(("val", f"{item_l['name']} {item_l['bars']}%", ""))
-            lines.append(segs or [("dots", ".", "")])
+                    segs.append(("dots", "  "))
+                segs.append((f"lang{idx}", "■ "))
+                segs.append(("val", f"{item_l['name']} {item_l['bars']}%"))
+            lines.append(segs or [("dots", ".")])
         else:
             val_str = value.format(**values)
             n = max(2, COLS - 5 - len(key) - len(val_str))
             lines.append([
-                ("dots", ". ", ""), ("key", key, ""), ("rule", ":", ""),
-                ("dots", " " + "." * n + " ", ""), ("val", val_str, ""),
+                ("dots", ". "), ("key", key), ("rule", ":"),
+                ("dots", " " + "." * n + " "), ("val", val_str),
             ])
     return lines
 
-def render(theme: dict, ascii_rows: list, info_lines: list) -> str:
+def render(theme: dict, ascii_rows: list, info_lines: list, lang_data: list) -> str:
     art_w = max(len(r) for r in ascii_rows) * ART_CHAR_W
     art_h = len(ascii_rows) * ART_LINE_H
     info_h = len(info_lines) * LINE_H
@@ -189,6 +189,11 @@ def render(theme: dict, ascii_rows: list, info_lines: list) -> str:
     art_y0 = PAD_TOP + (body_h - art_h) / 2 
     info_y0 = PAD_TOP + (body_h - info_h) / 2
 
+    lang_css = "\n    ".join(
+        f".lang{idx} {{ fill: {item_l['color']}; }}"
+        for idx, item_l in enumerate(lang_data)
+    )
+
     css = f"""
     text {{ font-family: {FONT}; white-space: pre; }}
     .ascii {{ fill: {theme['ascii']}; font-size: {ART_FONT_SIZE}px; font-weight: 700; }}
@@ -198,6 +203,7 @@ def render(theme: dict, ascii_rows: list, info_lines: list) -> str:
     .val {{ fill: {theme['val']}; }}
     .dots {{ fill: {theme['dots']}; }}
     .rule {{ fill: {theme['rule']}; }}
+    {lang_css}
     """
     parts = [
         f'<svg xmlns="http://w3.org" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
@@ -209,10 +215,7 @@ def render(theme: dict, ascii_rows: list, info_lines: list) -> str:
         parts.append(f'<text x="{PAD}" y="{y:.1f}" class="ascii" xml:space="preserve">{escape(row)}</text>')
     for i, segs in enumerate(info_lines):
         y = info_y0 + (i + 1) * LINE_H - 5
-        spans = ""
-        for cls, txt, color in segs:
-            style = f' style="fill:{color}"' if color else ""
-            spans += f'<tspan class="{cls}"{style}>{escape(txt)}</tspan>'
+        spans = "".join(f'<tspan class="{cls}">{escape(txt)}</tspan>' for cls, txt in segs)
         parts.append(f'<text x="{info_x:.1f}" y="{y:.1f}" class="info" xml:space="preserve">{spans}</text>')
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
@@ -247,7 +250,7 @@ def main():
     for name, theme in THEMES.items():
         rows = invert_ascii(ascii_rows) if theme.get("invert") else ascii_rows
         with open(os.path.join(ROOT, name), "w", encoding="utf-8") as f:
-            f.write(render(theme, rows, info_lines))
+            f.write(render(theme, rows, info_lines, values.get("lang_data", [])))
         print("gerado:", name)
 
 
